@@ -42,7 +42,7 @@ void Insert_at_end(struct node **head)
 void Insert_after_pos(struct node *temp)
 {
     struct node * newnode=CreatNode();
-   
+
     newnode->next=temp->next;
     temp->next=newnode;
 }
