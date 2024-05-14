@@ -55,6 +55,7 @@ while(choice)
         temp->next=newNode;
         newNode->prev=temp;
         temp=temp->next;
+        //temp=newNode; this will also work
     }
     printf("Do you want add one more Node,If Yes press 1 or if NOT press 0\n");
     scanf("%d",&choice);
