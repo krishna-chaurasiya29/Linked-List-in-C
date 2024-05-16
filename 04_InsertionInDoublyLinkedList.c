@@ -9,6 +9,8 @@ void Insert_after_pos(struct node* temp);
 void Delete_from_beg(struct node **head);
 void Delete_from_end(struct node **head);
 void Delete_after_pos(struct node *temp);
+void LengthCount(struct node *head);
+
 struct node
 {
     int data;
@@ -96,6 +98,19 @@ void Display(struct node *head)
     }
     printf("\n");
 }
+
+void LengthCount(struct node *head)
+{
+    int count=0;
+    struct node* temp;
+    temp=head;
+    while(temp!=NULL)
+    {
+        count++;
+        temp=temp->next;
+    }
+    printf("\nLength Of Linked List is :- %d\n",count); 
+}
 int main()
 {
     head=NULL;
@@ -121,6 +136,7 @@ int main()
    
  printf("LinkedList Created\n");
  Display(head);
+ LengthCount(head);
  choice=1;
  
  while(choice)
@@ -208,5 +224,6 @@ int main()
      }
      printf("Updated LinkedList\n");
      Display(head);
+     LengthCount(head);
  }
 }
