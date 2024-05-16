@@ -33,10 +33,23 @@ void Display( struct node *head)
     temp =head;
     while(temp!=NULL)
     {
-        printf("%d",temp->data);
+        printf("%d  ",temp->data);
         temp=temp->next;
     }
     printf("\n");
+}
+
+void LengthCount(struct node *head)
+{
+    int count=0;
+    struct node* temp;
+    temp=head;
+    while(temp!=NULL)
+    {
+        count++;
+        temp=temp->next;
+    }
+    printf("\nLength Of Linked List is :- %d\n",count); 
 }
 int main()
 {
@@ -62,5 +75,6 @@ while(choice)
 }
 printf("The Updated Linked List is \n");
 Display(head);
+LengthCount(head);
 return 0;
 }
