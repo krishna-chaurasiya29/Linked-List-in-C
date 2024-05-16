@@ -57,6 +57,7 @@ void Delete_From_beg(struct node **head)
   struct node *temp;
   temp=*head;
   *head=temp->next;
+  //*head=head->next; will also work
   free(temp);
 }
 
@@ -168,7 +169,7 @@ int main()
             break;
            
             case 5:
-            printf("Deletinf From end");
+            printf("Deleting From end");
             Delete_From_end(&head);
             break;
            
@@ -178,7 +179,7 @@ int main()
             scanf("%d",&position);
             struct node *next;
             temp=head;
-            for(int i=0;i<position && temp!=NULL;i++)
+            for(int i=1;i<position && temp!=NULL;i++)
             {
                 temp=temp->next;
                 next=temp->next;
