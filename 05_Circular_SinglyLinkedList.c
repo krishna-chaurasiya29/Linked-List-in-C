@@ -1,4 +1,4 @@
-//Singly Linkedlist
+//Singly Circular Linkedlist
 #include<stdio.h>
 #include<stdlib.h>
 struct node *CreatNode();
